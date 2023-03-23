@@ -1,16 +1,16 @@
 from typing import List
-
 from bowling.frame import Frame
 
-
 class BowlingGame:
-    frames: List[Frame]
-    bonus: Frame
+    def __init__ (self) -> None:
+        self.frames = List[Frame]
+        self.bonus = Frame
+    frames = List[Frame]
 
     def add_frame(self, frame: Frame):
         """ Add a frame to the game """
         # To be implemented
-        pass
+        self.frames.append(Frame(frame.first_throw, frame.second_throw))
 
     def set_bonus(self, first_throw: int, second_throw: int):
         """ The the bonus throw """
